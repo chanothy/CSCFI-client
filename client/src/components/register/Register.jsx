@@ -18,7 +18,6 @@ const Register = () => {
 
   const handleSubmit = () => {
     event.preventDefault();
-    console.log("Submission")
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (password != password2) {
       alert("password don't match")

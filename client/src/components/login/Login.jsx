@@ -23,7 +23,9 @@ const Login = () => {
         })
         .then((res) => {
           if (res.data.login && res.data.tfa == null) {
+            localStorage.setItem("session-token", res.data.token)
             alert("logged in");
+            navigate("/dashboard");
           }
         })
         .catch((err) => {

@@ -1,7 +1,12 @@
+import Navbar from "../global/Navbar";
+
 const Dashboard = () => {
-    return (
-        <div>Dashboard</div>
-    )
-}
+  return (
+    <>
+      <Navbar />
+      <p>Dashboard!</p>
+    </>
+  );
+};
 
 export default Dashboard;

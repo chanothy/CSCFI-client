@@ -1,23 +1,79 @@
-.navbar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.topnav {
   background-color: #333;
+  overflow: hidden;
+  width: 100%;
+  position: fixed; 
+  left: 0;
+  top: 0;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
 }
 
-.navbar li {
-  float: left;
-}
-
-.navbar li a {
-  display: block;
-  color: white;
+.topnav a {
+  display: inline-block; /* Display as inline-block */
+  color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 16px;
   text-decoration: none;
+  font-size: 17px;
+  vertical-align: middle; /* Align vertically */
 }
 
-.navbar li a:hover {
-  background-color: #111;
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
 }
+
+.topnav a.active {
+  background-color: #3679d1;
+  color: white;
+}
+
+.login-button {
+  margin-left: auto; /* Pushes login button to the right */
+  padding: 14px 16px;
+}
+
+.login-button button {
+  background-color: #3679d1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.login-button button:hover {
+  background-color: #285ca0;
+}
+
+.login-button a {
+  background-color: #3679d1;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.login-button a:hover {
+  background-color: #3679d1
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive a:not(:first-child) {
+    display: block;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
